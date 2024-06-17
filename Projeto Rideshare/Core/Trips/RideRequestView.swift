@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RideRequestView: View {
     
+    @State private var selectedRideType: RideType = .SUVLuxo
+    
     var body: some View {
     
         VStack {
@@ -99,7 +101,7 @@ struct RideRequestView: View {
                             
                             // Disposição vertical das informações do carro
                             
-                            VStack(spacing: 4){
+                            VStack(alignment: .leading, spacing: 4){
                                 Text(type.description)
                                     .font(.system(size:14, weight: .semibold))
                                 Text("$22.04")
@@ -109,8 +111,16 @@ struct RideRequestView: View {
                             
                         }
                         .frame(width: 112, height: 140)
-                        .background(Color(.systemGroupedBackground))
+                        .foregroundColor(type == selectedRideType ? .white : .black)
+                        .background(Color(type == selectedRideType
+                                          ? .systemBlue : .systemGroupedBackground))
+                        .scaleEffect(type == selectedRideType ? 1.1 : 1.0)
                         .cornerRadius(10)
+                        .onTapGesture{
+                            withAnimation(.spring()) {
+                                selectedRideType = type
+                            }
+                        }
                     }
                 }
             }
