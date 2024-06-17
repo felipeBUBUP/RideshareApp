@@ -19,6 +19,7 @@
 		3B7A8FD42C1E569E00594AFE /* SearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD32C1E569E00594AFE /* SearchActivationView.swift */; };
 		3B7A8FD62C1E594700594AFE /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */; };
 		3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */; };
+		3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF086452C1F78BE0060C528 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3B7A8FD32C1E569E00594AFE /* SearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActivationView.swift; sourceTree = "<group>"; };
 		3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		3BF086452C1F78BE0060C528 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		3B7A8FC52C1E3AA600594AFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3BF086452C1F78BE0060C528 /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				3B7A8FCE2C1E3E3C00594AFE /* LocationManager.swift in Sources */,
 				3B57CBF12C1E8577001B2DAB /* LocationSearchViewModel.swift in Sources */,
 				3B7A8FB52C1E3A3100594AFE /* Item.swift in Sources */,
+				3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */,
 				3B7A8FD42C1E569E00594AFE /* SearchActivationView.swift in Sources */,
 				3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */,
 				3B7A8FB12C1E3A3100594AFE /* Projeto_RideshareApp.swift in Sources */,

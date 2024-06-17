@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @State private var showSearchView = false
+
+    @State private var mapState = MapViewState.noInput
     
     var body: some View {
         ZStack(alignment: .bottom) {
             
-            UberMapViewRepresentable()
+            UberMapViewRepresentable(mapState: $mapState)
                 .ignoresSafeArea()
             
-            if showSearchView {
-                LocationSearchView(showLocationSearchView: $showSearchView)
-            } else{
+            if mapState == .searchingForLocation {
+                LocationSearchView(mapState: $mapState)
+            } else if mapState == .noInput {
                 SearchActivationView()
                     .padding(.bottom, 250)
                     .onTapGesture {
                         withAnimation(.spring()){
-                            showSearchView.toggle()
+                            mapState = .searchingForLocation
                         }
                     }
             }
             
-            MapViewActionButton(showSearchView: $showSearchView)
+            MapViewActionButton(mapState: $mapState)
                 .padding(.leading)
                 .padding(.bottom, 720)
         }
