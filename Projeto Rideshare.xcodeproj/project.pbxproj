@@ -19,6 +19,7 @@
 		3B7A8FD42C1E569E00594AFE /* SearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD32C1E569E00594AFE /* SearchActivationView.swift */; };
 		3B7A8FD62C1E594700594AFE /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */; };
 		3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */; };
+		3BB10DF02C20ADBD005C13E9 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */; };
 		3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF086452C1F78BE0060C528 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		3B7A8FD32C1E569E00594AFE /* SearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActivationView.swift; sourceTree = "<group>"; };
 		3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		3BF086452C1F78BE0060C528 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 		3B7A8FC22C1E3A9000594AFE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3BB10DEE2C20ADAB005C13E9 /* Trips */,
 				3B7A8FD02C1E567700594AFE /* LocationSearch */,
 				3B7A8FCF2C1E566600594AFE /* Home */,
 			);
@@ -184,6 +187,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3BB10DEE2C20ADAB005C13E9 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +273,7 @@
 				3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */,
 				3B7A8FD42C1E569E00594AFE /* SearchActivationView.swift in Sources */,
 				3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */,
+				3BB10DF02C20ADBD005C13E9 /* RideRequestView.swift in Sources */,
 				3B7A8FB12C1E3A3100594AFE /* Projeto_RideshareApp.swift in Sources */,
 				3B57CBEF2C1E6A14001B2DAB /* LocationSearchResultsCell.swift in Sources */,
 				3B7A8FD62C1E594700594AFE /* MapViewActionButton.swift in Sources */,
