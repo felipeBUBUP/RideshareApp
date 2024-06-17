@@ -20,6 +20,7 @@
 		3B7A8FD62C1E594700594AFE /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */; };
 		3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */; };
 		3BB10DF02C20ADBD005C13E9 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */; };
+		3BB10DF22C20D8EA005C13E9 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB10DF12C20D8EA005C13E9 /* RideType.swift */; };
 		3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF086452C1F78BE0060C528 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		3B7A8FD52C1E594700594AFE /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		3BB10DF12C20D8EA005C13E9 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		3BF086452C1F78BE0060C528 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3BF086452C1F78BE0060C528 /* MapViewState.swift */,
+				3BB10DF12C20D8EA005C13E9 /* RideType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B7A8FCC2C1E3B7F00594AFE /* UberMapViewRepresentable.swift in Sources */,
+				3BB10DF22C20D8EA005C13E9 /* RideType.swift in Sources */,
 				3B7A8FC92C1E3AF800594AFE /* HomeView.swift in Sources */,
 				3B7A8FCE2C1E3E3C00594AFE /* LocationManager.swift in Sources */,
 				3B57CBF12C1E8577001B2DAB /* LocationSearchViewModel.swift in Sources */,

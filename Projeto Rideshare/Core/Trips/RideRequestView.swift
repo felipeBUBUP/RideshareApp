@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct RideRequestView: View {
+    
     var body: some View {
+    
         VStack {
             
             Capsule()
@@ -88,17 +90,17 @@ struct RideRequestView: View {
                 
                 HStack(spacing: 12) {
                     
-                    ForEach(0 ..< 6, id: \.self) { _ in
+                    ForEach(RideType.allCases) { type in
                     
                         VStack(alignment: .leading) {
-                            Image("Sedan")
+                            Image(type.imageName)
                                 .resizable()
                                 .scaledToFit()
                             
                             // Disposição vertical das informações do carro
                             
                             VStack(spacing: 4){
-                                Text("Sedan")
+                                Text(type.description)
                                     .font(.system(size:14, weight: .semibold))
                                 Text("$22.04")
                                     .font(.system(size:14, weight: .semibold))
