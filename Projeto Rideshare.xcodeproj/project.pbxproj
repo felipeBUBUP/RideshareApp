@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B53BD582C20F21400E6ACC5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53BD572C20F21400E6ACC5 /* Double.swift */; };
 		3B57CBEF2C1E6A14001B2DAB /* LocationSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */; };
 		3B57CBF12C1E8577001B2DAB /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CBF02C1E8577001B2DAB /* LocationSearchViewModel.swift */; };
 		3B7A8FB12C1E3A3100594AFE /* Projeto_RideshareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FB02C1E3A3100594AFE /* Projeto_RideshareApp.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B53BD572C20F21400E6ACC5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
 		3B57CBF02C1E8577001B2DAB /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		3B7A8FAD2C1E3A3100594AFE /* Projeto Rideshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Rideshare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 		3B7A8FC32C1E3A9600594AFE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3B53BD572C20F21400E6ACC5 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				3B7A8FCE2C1E3E3C00594AFE /* LocationManager.swift in Sources */,
 				3B57CBF12C1E8577001B2DAB /* LocationSearchViewModel.swift in Sources */,
 				3B7A8FB52C1E3A3100594AFE /* Item.swift in Sources */,
+				3B53BD582C20F21400E6ACC5 /* Double.swift in Sources */,
 				3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */,
 				3B7A8FD42C1E569E00594AFE /* SearchActivationView.swift in Sources */,
 				3B7A8FD82C1E608500594AFE /* LocationSearchView.swift in Sources */,
