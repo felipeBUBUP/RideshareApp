@@ -10,9 +10,11 @@ import SwiftUI
 struct RideRequestView: View {
     var body: some View {
         VStack {
+            
             Capsule()
                 .foregroundColor(Color(.systemGray5))
                 .frame(width: 48, height: 6)
+                .padding(.top, 8)
             
             // Trip Info View
             
@@ -159,7 +161,10 @@ struct RideRequestView: View {
             }
             
         }
+        .padding(.bottom, 24)
         .background(.white)
+        .cornerRadius(16)
+
     }
 }
 

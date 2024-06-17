@@ -12,27 +12,43 @@ struct HomeView: View {
     @State private var mapState = MapViewState.noInput
     
     var body: some View {
+        
+        
         ZStack(alignment: .bottom) {
             
-            UberMapViewRepresentable(mapState: $mapState)
-                .ignoresSafeArea()
+            // Map View ZStack
             
-            if mapState == .searchingForLocation {
-                LocationSearchView(mapState: $mapState)
-            } else if mapState == .noInput {
-                SearchActivationView()
-                    .padding(.bottom, 250)
-                    .onTapGesture {
-                        withAnimation(.spring()){
-                            mapState = .searchingForLocation
+            ZStack(alignment: .bottom) {
+                
+                UberMapViewRepresentable(mapState: $mapState)
+                    .ignoresSafeArea()
+                
+                if mapState == .searchingForLocation {
+                    LocationSearchView(mapState: $mapState)
+                } else if mapState == .noInput {
+                    SearchActivationView()
+                        .padding(.bottom, 250)
+                        .onTapGesture {
+                            withAnimation(.spring()){
+                                mapState = .searchingForLocation
+                            }
                         }
-                    }
+                }
+                
+                MapViewActionButton(mapState: $mapState)
+                    .padding(.leading)
+                    .padding(.bottom, 720)
             }
             
-            MapViewActionButton(mapState: $mapState)
-                .padding(.leading)
-                .padding(.bottom, 720)
+            // Caso o mapState seja locationSelected, apresentamos o RideRequestView()
+            
+            if mapState == .locationSelected{
+                RideRequestView()
+                    .transition(.move(edge: .bottom))
+            }
+            
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
