@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B53BD582C20F21400E6ACC5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53BD572C20F21400E6ACC5 /* Double.swift */; };
+		3B53BD5A2C20F6A500E6ACC5 /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53BD592C20F6A500E6ACC5 /* AppLocation.swift */; };
 		3B57CBEF2C1E6A14001B2DAB /* LocationSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */; };
 		3B57CBF12C1E8577001B2DAB /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CBF02C1E8577001B2DAB /* LocationSearchViewModel.swift */; };
 		3B7A8FB12C1E3A3100594AFE /* Projeto_RideshareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A8FB02C1E3A3100594AFE /* Projeto_RideshareApp.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3B53BD572C20F21400E6ACC5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		3B53BD592C20F6A500E6ACC5 /* AppLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocation.swift; sourceTree = "<group>"; };
 		3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
 		3B57CBF02C1E8577001B2DAB /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		3B7A8FAD2C1E3A3100594AFE /* Projeto Rideshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Rideshare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			children = (
 				3BF086452C1F78BE0060C528 /* MapViewState.swift */,
 				3BB10DF12C20D8EA005C13E9 /* RideType.swift */,
+				3B53BD592C20F6A500E6ACC5 /* AppLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B53BD5A2C20F6A500E6ACC5 /* AppLocation.swift in Sources */,
 				3B7A8FCC2C1E3B7F00594AFE /* UberMapViewRepresentable.swift in Sources */,
 				3BB10DF22C20D8EA005C13E9 /* RideType.swift in Sources */,
 				3B7A8FC92C1E3AF800594AFE /* HomeView.swift in Sources */,
