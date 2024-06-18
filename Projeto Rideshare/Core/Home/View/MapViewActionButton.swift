@@ -1,25 +1,17 @@
-//
-//  MapViewActionButton.swift
-//  Projeto Rideshare
-//
-//  Created by Ana Luisa Resende Pimenta on 15/06/24.
-//
-
 import SwiftUI
 
 struct MapViewActionButton: View {
-    
     @Binding var mapState: MapViewState
     @EnvironmentObject var viewModel: LocationSearchViewModel
-    
-    
+    @Binding var showScheduleScreen: Bool  // Adicione este binding para controlar a visibilidade da ScheduleLocationView
+
     var body: some View {
         Button {
             withAnimation(.spring()){
-                actionForState(mapState)
+                actionForState()
             }
         } label: {
-            Image(systemName: imageNameForState(mapState))
+            Image(systemName: imageNameForState())
                 .font(.title2)
                 .foregroundColor(.black)
                 .padding()
@@ -30,36 +22,28 @@ struct MapViewActionButton: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    // MARK: - Define Estados do Botão
-    
-    func actionForState(_ state: MapViewState) {
-        switch state {
-        case.noInput:
-            print("DEBUG: No Input")
-        case.searchingForLocation:
-            mapState = .noInput
-        case .locationSelected, .polylineAdded:
+    func actionForState() {
+        if showScheduleScreen {
+            // Ação para fechar a ScheduleLocationView e voltar para a tela principal
+            showScheduleScreen = false
+        } else {
+            // Implemente outras lógicas conforme o estado atual do mapa
             mapState = .noInput
             viewModel.selectedAppLocation = nil
         }
     }
     
-    func imageNameForState(_ state: MapViewState) -> String {
-        switch state {
-        case.noInput:
-            return "line.3.horizontal"
-        case.searchingForLocation, .locationSelected:
-            return "arrow.left"
-        default:
-            return "line.3.horizontal"
+    func imageNameForState() -> String {
+        if showScheduleScreen {
+            return "arrow.left"  // Ícone de seta para a esquerda quando a ScheduleLocationView está visível
+        } else {
+            switch mapState {
+            case .noInput:
+                return "line.3.horizontal"
+            default:
+                return "arrow.left"
+            }
         }
     }
-    
-    
 }
 
-struct MapViewActionButton_Previews: PreviewProvider {
-    static var previews: some View{
-        MapViewActionButton(mapState: .constant(.noInput))
-    }
-}
