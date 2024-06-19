@@ -3,8 +3,9 @@ import SwiftUI
 struct ScheduleLocationView: View {
     @State private var startLocationText = ""
     @Binding var mapState: MapViewState
+    @Binding var showScheduleScreen: Bool
+    @Binding var showScheduleRequestView: Bool
     @EnvironmentObject var viewModel: LocationSearchViewModel
-    @Binding var showScheduleScreen: Bool  // Controle da visibilidade
 
     var body: some View {
         VStack {
@@ -24,21 +25,21 @@ struct ScheduleLocationView: View {
                 }
                 
                 VStack {
-                    TextField("Locatização Atual", text: $startLocationText)
+                    TextField("Localização Atual", text: $startLocationText)
                         .frame(height: 32)
                         .background(Color(.systemGroupedBackground))
-                        .cornerRadius(5)  // Assegure arredondamento se necessário
-                        .padding(.horizontal)  // Ajuste conforme necessário para alinhar com LocationSearchView
+                        .cornerRadius(5)
+                        .padding(.horizontal)
 
                     TextField("Para onde?", text: $viewModel.queryFragment)
                         .frame(height: 32)
                         .background(Color(.systemGray4))
-                        .cornerRadius(5)  // Assegure arredondamento se necessário
-                        .padding(.horizontal)  // Ajuste conforme necessário para alinhar com LocationSearchView
+                        .cornerRadius(5)
+                        .padding(.horizontal)
                 }
             }
             .padding(.horizontal)
-            .padding(.top, 130)  // Ajuste o topo se necessário
+            .padding(.top, 130)
 
             Divider().padding(.vertical)
 
@@ -47,9 +48,10 @@ struct ScheduleLocationView: View {
                     ForEach(viewModel.results, id: \.self) { result in
                         LocationSearchResultsCell(title: result.title, subtitle: result.subtitle)
                             .onTapGesture {
-                                withAnimation(.spring()) {
+                                withAnimation {
                                     viewModel.selectLocation(result)
-                                    showScheduleScreen = false  // Altera para fechar a tela
+                                    showScheduleScreen = false
+                                    showScheduleRequestView = true
                                 }
                             }
                     }

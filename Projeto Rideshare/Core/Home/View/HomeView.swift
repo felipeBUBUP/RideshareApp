@@ -4,29 +4,39 @@ struct HomeView: View {
     
     @State private var mapState = MapViewState.noInput
     @State private var showScheduleScreen = false
+    @State private var showScheduleRequestView = false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
+    @State private var showScheduleConfirm = false
+    @State private var selectedDate: Date = Date()
 
     var body: some View {
         ZStack(alignment: .bottom) {
             UberMapViewRepresentable(mapState: $mapState)
                 .ignoresSafeArea()
 
-            // Manage the visibility of ScheduleLocationView based on showScheduleScreen
             if showScheduleScreen {
-                ScheduleLocationView(mapState: $mapState, showScheduleScreen: $showScheduleScreen)
+                ScheduleLocationView(mapState: $mapState, showScheduleScreen: $showScheduleScreen, showScheduleRequestView: $showScheduleRequestView)
                     .environmentObject(locationViewModel)
-                    .transition(.move(edge: .bottom))  // Smooth transition for appearing
+                    .transition(.move(edge: .bottom))
             }
 
-            // Show LocationSearchView when searching for a location
+            if showScheduleRequestView {
+                ScheduleRequestView(showScheduleRequestView: $showScheduleRequestView, showScheduleConfirm: $showScheduleConfirm)
+                    .environmentObject(locationViewModel)
+            }
+            
+            if showScheduleConfirm {
+                ScheduleConfirm(showScheduleConfirm: $showScheduleConfirm, selectedDate: selectedDate)
+                    .environmentObject(locationViewModel)
+            }
+
             if mapState == .searchingForLocation {
                 LocationSearchView(mapState: $mapState)
                     .environmentObject(locationViewModel)
-                    .transition(.move(edge: .bottom))  // Consistent transition for both views
+                    .transition(.move(edge: .bottom))
             }
 
-            // BottomPanelView appears only when no other views are active
-            if mapState == .noInput && !showScheduleScreen {
+            if mapState == .noInput && !showScheduleScreen && !showScheduleRequestView && !showScheduleConfirm {
                 BottomPanelView(mapState: $mapState, showScheduleScreen: $showScheduleScreen)
                     .environmentObject(locationViewModel)
                     .padding(.horizontal)
@@ -34,13 +44,16 @@ struct HomeView: View {
                     .transition(.move(edge: .bottom))
             }
 
-            // Action button adjusted to accommodate the visibility of the schedule screen
-            MapViewActionButton(mapState: $mapState, showScheduleScreen: $showScheduleScreen)
-                .padding(.leading)
-                .padding(.bottom, 720)
+            MapViewActionButton(
+                mapState: $mapState,
+                showScheduleScreen: $showScheduleScreen,
+                showScheduleRequestView: $showScheduleRequestView,
+                showScheduleConfirm: $showScheduleConfirm
+            )
+            .padding(.leading)
+            .padding(.bottom, 720)
 
 
-            // RideRequestView appears when a location is selected or a polyline is added
             if mapState == .locationSelected || mapState == .polylineAdded {
                 RideRequestView()
                     .transition(.move(edge: .bottom))

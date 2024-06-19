@@ -26,6 +26,7 @@
 		3BC3707B2C21C01B00B3101E /* BottomPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3707A2C21C01B00B3101E /* BottomPanelView.swift */; };
 		3BC370802C21FA3700B3101E /* ScheduleLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3707F2C21FA3700B3101E /* ScheduleLocationView.swift */; };
 		3BC370842C220A5700B3101E /* ScheduleRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC370832C220A5700B3101E /* ScheduleRequestView.swift */; };
+		3BC370862C22204100B3101E /* ScheduleConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC370852C22204100B3101E /* ScheduleConfirm.swift */; };
 		3BF086462C1F78BE0060C528 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF086452C1F78BE0060C528 /* MapViewState.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		3BC3707A2C21C01B00B3101E /* BottomPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPanelView.swift; sourceTree = "<group>"; };
 		3BC3707F2C21FA3700B3101E /* ScheduleLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleLocationView.swift; sourceTree = "<group>"; };
 		3BC370832C220A5700B3101E /* ScheduleRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestView.swift; sourceTree = "<group>"; };
+		3BC370852C22204100B3101E /* ScheduleConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleConfirm.swift; sourceTree = "<group>"; };
 		3BF086452C1F78BE0060C528 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 			children = (
 				3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */,
 				3BC370832C220A5700B3101E /* ScheduleRequestView.swift */,
+				3BC370852C22204100B3101E /* ScheduleConfirm.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				3BC3707B2C21C01B00B3101E /* BottomPanelView.swift in Sources */,
 				3B53BD5A2C20F6A500E6ACC5 /* AppLocation.swift in Sources */,
 				3B7A8FCC2C1E3B7F00594AFE /* UberMapViewRepresentable.swift in Sources */,
+				3BC370862C22204100B3101E /* ScheduleConfirm.swift in Sources */,
 				3BB10DF22C20D8EA005C13E9 /* RideType.swift in Sources */,
 				3B7A8FC92C1E3AF800594AFE /* HomeView.swift in Sources */,
 				3B7A8FCE2C1E3E3C00594AFE /* LocationManager.swift in Sources */,

@@ -15,15 +15,21 @@ struct BottomPanelView: View {
             .buttonStyle(PlainButtonStyle()) // Mantém a aparência original do SearchActivationView
 
             HStack {
-                Button("Agendar Transfer") {
+                Button("Agendar Viagem") {
                     showScheduleScreen = true  // Ativa a exibição da ScheduleLocationView
                 }
-                .buttonStyle(PrimaryButtonStyle())
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(8)
 
                 Button("Planejar Viagem") {
                     // Implementação da ação de planejar
                 }
-                .buttonStyle(PrimaryButtonStyle())
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(8)
             }
         }
         .padding(.horizontal)
@@ -33,15 +39,3 @@ struct BottomPanelView: View {
     }
 }
 
-
-
-struct PrimaryButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.blue)
-            .cornerRadius(8)
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-    }
-}
