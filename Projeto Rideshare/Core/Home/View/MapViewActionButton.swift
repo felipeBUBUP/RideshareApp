@@ -6,6 +6,7 @@ struct MapViewActionButton: View {
     @Binding var showScheduleScreen: Bool
     @Binding var showScheduleRequestView: Bool
     @Binding var showScheduleConfirm: Bool
+    @Binding var showTripPlanningView: Bool
     @EnvironmentObject var viewModel: LocationSearchViewModel
     
     var body: some View {
@@ -26,17 +27,17 @@ struct MapViewActionButton: View {
     }
     
     private func actionForState() {
-        if mapState != .noInput || showScheduleScreen || showScheduleRequestView || showScheduleConfirm {
-            showScheduleScreen = false
-            showScheduleRequestView = false
-            showScheduleConfirm = false
-            mapState = .noInput
-        }
+        // Reset all states when any close action is triggered
+        showScheduleScreen = false
+        showScheduleRequestView = false
+        showScheduleConfirm = false
+        showTripPlanningView = false // Garante que o estado do planejamento da viagem também seja redefinido
+        mapState = .noInput
     }
     
     private func imageNameForState() -> String {
-        // Se está na tela inicial, mostra o ícone do menu, senão mostra a seta para voltar
-        return (mapState == .noInput && !showScheduleScreen && !showScheduleRequestView && !showScheduleConfirm) ? "line.3.horizontal" : "arrow.left"
+        // Se está em algum estado específico, mostra a seta para voltar, caso contrário mostra o ícone do menu
+        return (mapState == .noInput && !showScheduleScreen && !showScheduleRequestView && !showScheduleConfirm && !showTripPlanningView) ? "line.3.horizontal" : "arrow.left"
     }
 }
 

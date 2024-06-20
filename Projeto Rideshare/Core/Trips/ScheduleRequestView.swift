@@ -7,15 +7,18 @@ struct ScheduleRequestView: View {
     @Binding var showScheduleConfirm: Bool
 
     var body: some View {
-        VStack(spacing: 10) { // Reduz o espaçamento entre os elementos
-            
-            Text("SELCIONE DATA E HORA")
-                .font(.subheadline)
+        VStack(spacing: 20) {  // Increased spacing for clarity
+            Capsule()
+                .foregroundColor(Color(.systemGray4)) // Capsule to indicate swipe down or modal indicator
+                .frame(width: 60, height: 6)
+                .padding(.top, 10)
+
+            Text("SELECIONE DATA E HORA")
+                .font(.headline)
                 .fontWeight(.semibold)
-                .padding(.leading)
                 .foregroundColor(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
+                .padding(.horizontal)
+
             DatePicker(
                 "Selecione Data e Hora:",
                 selection: $selectedDate,
@@ -23,23 +26,26 @@ struct ScheduleRequestView: View {
                 displayedComponents: [.date, .hourAndMinute]
             )
             .datePickerStyle(GraphicalDatePickerStyle())
-            .padding(.horizontal, 10) // Reduz o padding horizontal
+            .padding(.horizontal)  // Consistent horizontal padding
+            
 
             Button("Confirmar Agendamento") {
                 showScheduleRequestView = false
                 showScheduleConfirm = true
             }
             .padding()
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity)  // Ensures the button stretches to full width
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
-            .padding(.horizontal, 10) // Reduz o padding ao redor do botão
+            .padding(.bottom, 10)  // Adds padding at the bottom for spacing
+
         }
-        .padding(.vertical, 10) // Reduz o padding vertical do VStack
+        .padding(.horizontal)  // Reduces horizontal padding to allow more content width
         .background(Color.white)
         .cornerRadius(16)
-        .padding(.horizontal, 10) // Reduz o padding horizontal da view externa
+        .shadow(radius: 10)  // Optional: add shadow for better UI depth
+        .padding(.horizontal, 10)  // Adjust horizontal padding for overall view consistency
     }
 }
 

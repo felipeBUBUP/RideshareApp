@@ -3,6 +3,7 @@ import SwiftUI
 struct BottomPanelView: View {
     @Binding var mapState: MapViewState
     @Binding var showScheduleScreen: Bool
+    @Binding var showTripPlanningView: Bool  // Garantir que esta variável está vinculada corretamente ao estado no HomeView
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
 
     var body: some View {
@@ -24,11 +25,11 @@ struct BottomPanelView: View {
                 .cornerRadius(8)
 
                 Button("Planejar Viagem") {
-                    // Implementação da ação de planejar
+                    showTripPlanningView = true  // Ativa a exibição da TripPlanningView
                 }
-                .foregroundColor(.white)
                 .padding()
                 .background(Color.blue)
+                .foregroundColor(.white)
                 .cornerRadius(8)
             }
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4592752C23863E002DABFA /* TripPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4592742C23863E002DABFA /* TripPlanningView.swift */; };
+		3B4592772C23938C002DABFA /* TripConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4592762C23938C002DABFA /* TripConfirmationView.swift */; };
 		3B53BD582C20F21400E6ACC5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53BD572C20F21400E6ACC5 /* Double.swift */; };
 		3B53BD5A2C20F6A500E6ACC5 /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53BD592C20F6A500E6ACC5 /* AppLocation.swift */; };
 		3B57CBEF2C1E6A14001B2DAB /* LocationSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B4592742C23863E002DABFA /* TripPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlanningView.swift; sourceTree = "<group>"; };
+		3B4592762C23938C002DABFA /* TripConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripConfirmationView.swift; sourceTree = "<group>"; };
 		3B53BD572C20F21400E6ACC5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		3B53BD592C20F6A500E6ACC5 /* AppLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocation.swift; sourceTree = "<group>"; };
 		3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 		3B7A8FC22C1E3A9000594AFE /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3BC3707D2C21FA0500B3101E /* LocationSchedule */,
 				3BB10DEE2C20ADAB005C13E9 /* Trips */,
 				3B7A8FD02C1E567700594AFE /* LocationSearch */,
 				3B7A8FCF2C1E566600594AFE /* Home */,
@@ -199,6 +202,7 @@
 		3B7A8FD22C1E568C00594AFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3BC3707F2C21FA3700B3101E /* ScheduleLocationView.swift */,
 				3B7A8FD32C1E569E00594AFE /* SearchActivationView.swift */,
 				3B7A8FD72C1E608500594AFE /* LocationSearchView.swift */,
 				3B57CBEE2C1E6A14001B2DAB /* LocationSearchResultsCell.swift */,
@@ -212,24 +216,10 @@
 				3BB10DEF2C20ADBD005C13E9 /* RideRequestView.swift */,
 				3BC370832C220A5700B3101E /* ScheduleRequestView.swift */,
 				3BC370852C22204100B3101E /* ScheduleConfirm.swift */,
+				3B4592742C23863E002DABFA /* TripPlanningView.swift */,
+				3B4592762C23938C002DABFA /* TripConfirmationView.swift */,
 			);
 			path = Trips;
-			sourceTree = "<group>";
-		};
-		3BC3707D2C21FA0500B3101E /* LocationSchedule */ = {
-			isa = PBXGroup;
-			children = (
-				3BC3707E2C21FA2000B3101E /* Views */,
-			);
-			path = LocationSchedule;
-			sourceTree = "<group>";
-		};
-		3BC3707E2C21FA2000B3101E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3BC3707F2C21FA3700B3101E /* ScheduleLocationView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +294,8 @@
 			files = (
 				3BC3707B2C21C01B00B3101E /* BottomPanelView.swift in Sources */,
 				3B53BD5A2C20F6A500E6ACC5 /* AppLocation.swift in Sources */,
+				3B4592752C23863E002DABFA /* TripPlanningView.swift in Sources */,
+				3B4592772C23938C002DABFA /* TripConfirmationView.swift in Sources */,
 				3B7A8FCC2C1E3B7F00594AFE /* UberMapViewRepresentable.swift in Sources */,
 				3BC370862C22204100B3101E /* ScheduleConfirm.swift in Sources */,
 				3BB10DF22C20D8EA005C13E9 /* RideType.swift in Sources */,

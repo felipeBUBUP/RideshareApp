@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     @State private var mapState = MapViewState.noInput
     @State private var showScheduleScreen = false
     @State private var showScheduleRequestView = false
-    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     @State private var showScheduleConfirm = false
-    @State private var selectedDate: Date = Date()
+    @State private var showTripPlanningView = false
+    @State private var showTripConfirmationView = false
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -26,8 +26,20 @@ struct HomeView: View {
             }
             
             if showScheduleConfirm {
-                ScheduleConfirm(showScheduleConfirm: $showScheduleConfirm, selectedDate: selectedDate)
+                ScheduleConfirm(showScheduleConfirm: $showScheduleConfirm, selectedDate: Date())
                     .environmentObject(locationViewModel)
+            }
+
+            if showTripPlanningView {
+                TripPlanningView(showTripConfirmationView: $showTripConfirmationView, showTripPlanningView: $showTripPlanningView)
+                    .environmentObject(locationViewModel)
+                    .transition(.move(edge: .bottom))
+            }
+
+            if showTripConfirmationView {
+                TripConfirmationView(showTripConfirmationView: $showTripConfirmationView, destination: "---", tripDate: Date())
+                    .environmentObject(locationViewModel)
+                    .transition(.move(edge: .bottom))
             }
 
             if mapState == .searchingForLocation {
@@ -36,8 +48,8 @@ struct HomeView: View {
                     .transition(.move(edge: .bottom))
             }
 
-            if mapState == .noInput && !showScheduleScreen && !showScheduleRequestView && !showScheduleConfirm {
-                BottomPanelView(mapState: $mapState, showScheduleScreen: $showScheduleScreen)
+            if mapState == .noInput && !showScheduleScreen && !showScheduleRequestView && !showScheduleConfirm && !showTripPlanningView && !showTripConfirmationView {
+                BottomPanelView(mapState: $mapState, showScheduleScreen: $showScheduleScreen, showTripPlanningView: $showTripPlanningView)
                     .environmentObject(locationViewModel)
                     .padding(.horizontal)
                     .padding(.bottom, 50)
@@ -48,7 +60,8 @@ struct HomeView: View {
                 mapState: $mapState,
                 showScheduleScreen: $showScheduleScreen,
                 showScheduleRequestView: $showScheduleRequestView,
-                showScheduleConfirm: $showScheduleConfirm
+                showScheduleConfirm: $showScheduleConfirm,
+                showTripPlanningView: $showTripPlanningView
             )
             .padding(.leading)
             .padding(.bottom, 720)
@@ -67,4 +80,3 @@ struct HomeView: View {
         }
     }
 }
-
